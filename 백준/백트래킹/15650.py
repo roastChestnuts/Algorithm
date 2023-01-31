@@ -27,3 +27,21 @@ def func(idx):
             func(i+1) #자신보다 작은 값은 이미 처리됐으니 호출은 자신보다 큰 값을 시작점으로
             ans.pop()
 func(0)          
+
+#######(230130재풀이)
+n, m = map(int, input().split())
+arr = []
+
+def back(start):
+    if len(arr) == m:
+        print(*arr)
+        return
+    
+    for i in range(start, n+1):
+        arr.append(i)
+        back(i+1)
+        arr.pop()
+        
+back(1)       
+
+#https://dogsavestheworld.tistory.com/269
