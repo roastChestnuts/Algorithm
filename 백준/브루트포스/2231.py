@@ -1,3 +1,4 @@
+#시간 복잡도 O(n)
 import sys
 input = sys.stdin.readline
 
@@ -11,18 +12,3 @@ for n in range(num):
         break
 
 print(constructor)           
-
-
-# constructor = 0
-# num = int(input())
-
-# for n in range(num):
-#     constructor = n
-#     for j in str(n):
-#         constructor += int(j)
-#     if constructor == num:
-#         constructor = n
-#         break
-#     else:
-#         constructor = 0
-# print(constructor)        

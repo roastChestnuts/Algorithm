@@ -1,24 +1,20 @@
+#시간 복잡도 : O(n^2)
 import sys
 input = sys.stdin.readline
 
-arr = []
-for i in range(9):
-    arr.append(int(input()))
-
-check_sum = sum(arr)
-
-del_1=0
-del_2=0
+people = [int(input()) for _ in range(9)]
+rm1 = 0
+rm2 = 0
 
 for i in range(8):
     for j in range(i+1, 9):
-        if check_sum-arr[i]-arr[j] == 100:
-            del_1 = arr[i]
-            del_2 = arr[j]
+        if sum(people) - people[i] - people[j] == 100:
+            rm1 = people[i]
+            rm2 = people[j]
             break
+people.remove(rm1)          
+people.remove(rm2)
+people.sort()
 
-arr.remove(del_1)          
-arr.remove(del_2)
-arr.sort()
-for num in arr:
-    print(num)
+for person in people:
+  print(person)
