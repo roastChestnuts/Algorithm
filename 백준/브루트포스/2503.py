@@ -1,10 +1,12 @@
+#어렵다...컴퓨터의 관점에서 생각을 할 수 있도록 사고를 전환해야하는데
+#이 일련의 과정을 떠올리는게 제일 어려운 문제인듯하다.
 num_list = [True for i in range(1000)]
 
 for i in range(123, 1000):
-  list_i = str(i)
-  if list_i[0] == list_i[1] or list_i[1] == list_i[2] or list_i[0] == list_i[2]:
+  str_i = str(i)
+  if str_i[0] == str_i[1] or str_i[1] == str_i[2] or str_i[0] == str_i[2]:
     num_list[i] = False
-  elif list_i[0] == '0' or list_i[1] == '0' or list_i[2] == '0':
+  elif str_i[0] == '0' or str_i[1] == '0' or str_i[2] == '0':
     num_list[i] = False
 
 n = int(input())
