@@ -21,3 +21,4 @@ while n!= 0:
         r -= line
         c -= line
 print(ans)        
+

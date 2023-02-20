@@ -14,7 +14,7 @@ for i in range(1, n):
         dp[i][0] = dp[i-1][1] + array[i]
         dp[i][1] = max(dp[i-2]) + array[i]
         
-print(max(dp[n-1]))        
+print(max(dp[n-1]))          
 
 #예시값        10 20 15 25 10 20
 #인덱스        [0  1  2  3  4  5]
